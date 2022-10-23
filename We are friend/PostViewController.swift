@@ -5,25 +5,23 @@
 //  Created by おのしょうき on 2022/08/07.
 //
 
-import UIKit
+import Foundation
+import Firebase
 
-class PostViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+struct Post {
     
+    let content: String
+    let postID: String
+    let senderID: String
+    let createdAt: Timestamp
+    let updatedAt: Timestamp
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    init(data: [String: Any]) {
+        content = data["content"] as! String
+        postID = data["postID"] as! String
+        senderID = data["senderID"] as! String
+        createdAt = data["createdAt"] as! Timestamp
+        updatedAt = data["updatedAt"] as! Timestamp
     }
-    */
-
 }
+
