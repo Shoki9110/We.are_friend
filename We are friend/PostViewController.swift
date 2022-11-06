@@ -19,7 +19,7 @@ struct Post {
     init(data: [String: Any]) {
         content = data["content"] as! String
         postID = data["postID"] as! String
-        senderID = data["senderID"] as! String
+        senderID = data["senderID"] as? String ?? ""
         createdAt = data["createdAt"] as! Timestamp
         updatedAt = data["updatedAt"] as! Timestamp
     }
