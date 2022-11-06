@@ -13,6 +13,7 @@
 		4F0907F2286839C900C4ED72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0907F0286839C900C4ED72 /* Main.storyboard */; };
 		4F0907F4286839CB00C4ED72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F0907F3286839CB00C4ED72 /* Assets.xcassets */; };
 		4F0907F7286839CB00C4ED72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F0907F5286839CB00C4ED72 /* LaunchScreen.storyboard */; };
+		4F1A703629178B15001532CB /* スクリーンショット 2022-11-06 15.20.39.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A703529178B15001532CB /* スクリーンショット 2022-11-06 15.20.39.png */; };
 		4F2AEBC6289F697F0052AA5E /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2AEBC5289F697F0052AA5E /* AddViewController.swift */; };
 		4F2AEBC8289F805D0052AA5E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2AEBC7289F805D0052AA5E /* PostViewController.swift */; };
 		4F2AEBCA289F82260052AA5E /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2AEBC9289F82260052AA5E /* UserViewController.swift */; };
@@ -37,6 +38,7 @@
 		4F0907F3286839CB00C4ED72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F0907F6286839CB00C4ED72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F0907F8286839CB00C4ED72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F1A703529178B15001532CB /* スクリーンショット 2022-11-06 15.20.39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "スクリーンショット 2022-11-06 15.20.39.png"; path = "マーク/スクリーンショット 2022-11-06 15.20.39.png"; sourceTree = SOURCE_ROOT; };
 		4F2AEBC5289F697F0052AA5E /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		4F2AEBC7289F805D0052AA5E /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		4F2AEBC9289F82260052AA5E /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 		4F0907E9286839C900C4ED72 /* We are friend */ = {
 			isa = PBXGroup;
 			children = (
+				4F1A703529178B15001532CB /* スクリーンショット 2022-11-06 15.20.39.png */,
 				4F2AEBDB289FCBD20052AA5E /* Notification.png */,
 				4F2AEBD9289FCAC40052AA5E /* Profile.png */,
 				4F2AEBD5289FC9BC0052AA5E /* Home.png */,
@@ -189,6 +192,7 @@
 				4F644B2828CD9E9B00196D8E /* GoogleService-Info.plist in Resources */,
 				4F2AEBDA289FCAC40052AA5E /* Profile.png in Resources */,
 				4F0907F7286839CB00C4ED72 /* LaunchScreen.storyboard in Resources */,
+				4F1A703629178B15001532CB /* スクリーンショット 2022-11-06 15.20.39.png in Resources */,
 				4F2AEBDC289FCBD20052AA5E /* Notification.png in Resources */,
 				4F2AEBD6289FC9BC0052AA5E /* Home.png in Resources */,
 				4F0907F4286839CB00C4ED72 /* Assets.xcassets in Resources */,

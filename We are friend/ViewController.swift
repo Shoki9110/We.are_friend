@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var database: Firestore! //宣言
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination =  segue.destination as! AddViewController
+//        let destination =  segue.destination as! AddViewController
 
         
     }
@@ -66,7 +66,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //セルが押された時に呼ばれるメゾット
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(postArray[indexPath.row])が選ばれました！")
+        performSegue(withIdentifier: "toGoNextView", sender: nil)
     }
+    
     
 }
 
