@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F01FD4D2929C17000F9766E /* ReplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F01FD4C2929C17000F9766E /* ReplyViewController.swift */; };
 		4F0907EB286839C900C4ED72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0907EA286839C900C4ED72 /* AppDelegate.swift */; };
 		4F0907ED286839C900C4ED72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0907EC286839C900C4ED72 /* SceneDelegate.swift */; };
 		4F0907EF286839C900C4ED72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0907EE286839C900C4ED72 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		15E3EAB78194D25917A96FF2 /* Pods-We are friend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-We are friend.release.xcconfig"; path = "Target Support Files/Pods-We are friend/Pods-We are friend.release.xcconfig"; sourceTree = "<group>"; };
 		4820B30D05310A0E6BA6055B /* Pods_We_are_friend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_We_are_friend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F01FD4C2929C17000F9766E /* ReplyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyViewController.swift; sourceTree = "<group>"; };
 		4F0907E7286839C900C4ED72 /* We are friend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "We are friend.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F0907EA286839C900C4ED72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F0907EC286839C900C4ED72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				4F2AEBCB289F83EF0052AA5E /* AccountViewController.swift */,
 				4F2AEBC7289F805D0052AA5E /* PostViewController.swift */,
 				4F2AEBC9289F82260052AA5E /* UserViewController.swift */,
+				4F01FD4C2929C17000F9766E /* ReplyViewController.swift */,
 			);
 			path = "We are friend";
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				4F2AEBC6289F697F0052AA5E /* AddViewController.swift in Sources */,
 				4F0907ED286839C900C4ED72 /* SceneDelegate.swift in Sources */,
 				4F2AEBC8289F805D0052AA5E /* PostViewController.swift in Sources */,
+				4F01FD4D2929C17000F9766E /* ReplyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
