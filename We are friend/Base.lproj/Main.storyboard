@@ -68,7 +68,7 @@
                     <connections>
                         <outlet property="table" destination="YJG-BW-WEo" id="irE-Bu-q1G"/>
                         <segue destination="ntg-mO-VNh" kind="presentation" identifier="Add" id="CRO-8a-amn"/>
-                        <segue destination="UTN-ZM-sqi" kind="show" identifier="toGoNextView" id="wHi-MU-uFB"/>
+                        <segue destination="UTN-ZM-sqi" kind="show" identifier="toReplay" id="wHi-MU-uFB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -174,6 +174,9 @@
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADm-IC-ACl">
                                 <rect key="frame" x="0.0" y="20" width="414" height="137"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="137" id="Vlp-g4-0Bo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -204,21 +207,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Ki2-8y-VIJ" firstAttribute="trailing" secondItem="ADm-IC-ACl" secondAttribute="trailing" id="12j-JY-MH7"/>
+                            <constraint firstItem="ADm-IC-ACl" firstAttribute="leading" secondItem="Ki2-8y-VIJ" secondAttribute="leading" id="6WU-ct-cyq"/>
                             <constraint firstAttribute="trailing" secondItem="ttN-DM-sWN" secondAttribute="trailing" id="Bna-7q-R62"/>
                             <constraint firstItem="ttN-DM-sWN" firstAttribute="leading" secondItem="0ND-6W-vOg" secondAttribute="leading" id="GTN-lp-tWf"/>
+                            <constraint firstItem="ADm-IC-ACl" firstAttribute="top" secondItem="b4E-7j-YSK" secondAttribute="top" constant="20" id="ILm-8S-an9"/>
                             <constraint firstAttribute="bottom" secondItem="ttN-DM-sWN" secondAttribute="bottom" id="LF9-z4-3Tm"/>
                             <constraint firstItem="m8h-02-JFW" firstAttribute="leading" secondItem="b4E-7j-YSK" secondAttribute="leading" constant="20" id="MBQ-Vk-BGK"/>
                             <constraint firstItem="b4E-7j-YSK" firstAttribute="trailing" secondItem="KcT-4X-Tf2" secondAttribute="trailing" constant="20" id="MGj-f3-2m9"/>
                             <constraint firstAttribute="bottom" secondItem="Ki2-8y-VIJ" secondAttribute="bottom" id="MNC-Jp-llq"/>
+                            <constraint firstItem="ADm-IC-ACl" firstAttribute="trailing" secondItem="Ki2-8y-VIJ" secondAttribute="trailing" id="OAB-mN-s7q"/>
                             <constraint firstItem="Ki2-8y-VIJ" firstAttribute="leading" secondItem="b4E-7j-YSK" secondAttribute="leading" id="PEj-DZ-UuA"/>
                             <constraint firstItem="Ki2-8y-VIJ" firstAttribute="trailing" secondItem="b4E-7j-YSK" secondAttribute="trailing" id="TqB-xf-zD9"/>
-                            <constraint firstItem="Ki2-8y-VIJ" firstAttribute="leading" secondItem="ADm-IC-ACl" secondAttribute="leading" id="WYS-md-kbQ"/>
                             <constraint firstItem="KcT-4X-Tf2" firstAttribute="leading" secondItem="m8h-02-JFW" secondAttribute="trailing" constant="23" id="Ylr-gC-1KZ"/>
                             <constraint firstItem="ttN-DM-sWN" firstAttribute="leading" secondItem="0ND-6W-vOg" secondAttribute="leading" id="aLd-P3-Xye"/>
                             <constraint firstItem="ttN-DM-sWN" firstAttribute="top" secondItem="0ND-6W-vOg" secondAttribute="top" id="f6q-pj-YhK"/>
                             <constraint firstItem="ttN-DM-sWN" firstAttribute="top" secondItem="0ND-6W-vOg" secondAttribute="top" id="iT9-Ll-cqc"/>
-                            <constraint firstItem="Ki2-8y-VIJ" firstAttribute="top" secondItem="ADm-IC-ACl" secondAttribute="bottom" constant="8" symbolic="YES" id="j3U-py-Nu8"/>
                             <constraint firstItem="b4E-7j-YSK" firstAttribute="bottom" secondItem="KcT-4X-Tf2" secondAttribute="bottom" constant="33" id="ks9-YS-xmx"/>
                             <constraint firstItem="b4E-7j-YSK" firstAttribute="bottom" secondItem="m8h-02-JFW" secondAttribute="bottom" constant="33" id="xDs-52-zNi"/>
                         </constraints>
@@ -228,6 +231,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="Gs3-aX-FOP"/>
                     <connections>
+                        <outlet property="label1" destination="ADm-IC-ACl" id="067-Ak-KCC"/>
+                        <outlet property="table" destination="Ki2-8y-VIJ" id="dWp-ps-UAy"/>
                         <outlet property="textField" destination="m8h-02-JFW" id="aNM-Sx-OSH"/>
                     </connections>
                 </viewController>

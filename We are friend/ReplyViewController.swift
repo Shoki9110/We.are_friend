@@ -6,14 +6,27 @@
 //
 
 import UIKit
+import Firebase
 
-class ReplyViewController: UIViewController {
+class ReplyViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
     @IBOutlet var textField: UITextField!
-    
+    @IBOutlet var table:UITableView!
+    var selectedText: String = ""
     var textFieldString = ""
+    var argString = ""
+    var commentArray = [String]()
+    @IBOutlet var label1: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        table.dataSource = self
+        table.delegate = self
+        label1.text = selectedText
+        self.commentArray = []
+        
+    }
+    @IBAction func backView1(_sender: Any){
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func tableViewTap(_ sender: Any){
         self.view.endEditing(true)
@@ -21,7 +34,6 @@ class ReplyViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         let notification = NotificationCenter.default
         notification.addObserver(self, selector: #selector(self.keyboardWillShow(_:)),
                                  name: UIResponder.keyboardWillShowNotification,
@@ -29,6 +41,7 @@ class ReplyViewController: UIViewController {
         notification.addObserver(self, selector: #selector(self.keyboardWillHide(_:)),
                                  name: UIResponder.keyboardWillHideNotification,
                                  object: nil)
+        
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
@@ -63,7 +76,19 @@ class ReplyViewController: UIViewController {
         textField.text = ""
         
     }
-
-    
-    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return commentArray.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+        
+        cell?.textLabel?.text = commentArray[indexPath.row]
+        return cell!
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("\(commentArray[indexPath.row])が選ばれました！")
+    }
 }

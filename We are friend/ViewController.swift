@@ -9,20 +9,26 @@ import UIKit
 import Firebase
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-   
+    
     
     //StoryBoardで扱うTableViewを宣言
     @IBOutlet var table: UITableView!
     
-    
     var postArray: [Post] = []
     var database: Firestore! //宣言
+    var selectedText: String = ""
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let destination =  segue.destination as! AddViewController
-
-        
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        //        let destination =  segue.destination as! AddViewController
+//
+//        if segue.identifier == "toReplay" {
+//
+//            let nextView = segue.destination as! ReplyViewController
+//
+//            nextView.argString = "text"
+//
+//        }
+//    }
     
     //投稿追加画面に遷移するボタンを押したときの動作を記述。
     @IBAction func toAddViewController() {
@@ -66,11 +72,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     //セルが押された時に呼ばれるメゾット
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(postArray[indexPath.row])が選ばれました！")
-        performSegue(withIdentifier: "toGoNextView", sender: nil)
+        performSegue(withIdentifier: "toReplay", sender: nil)
+        selectedText = postArray[indexPath.row].content
+        if selectedText != nil {
+            performSegue(withIdentifier: "toReplay",sender: nil)
+        }
     }
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "toReplay") {
+        let subVC: ReplyViewController = (segue.destination as? ReplyViewController)!
+        subVC.selectedText = selectedText
+        }
+    }
 }
-
-
-
+    
