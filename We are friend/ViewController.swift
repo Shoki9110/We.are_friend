@@ -77,7 +77,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         selectedText = postArray[indexPath.row].content
         selectedID = postArray[indexPath.row].postID
         if selectedText != nil {
-            performSegue(withIdentifier: "toReplay",sender: nil)
+        performSegue(withIdentifier: "toReplay",sender: nil)
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {

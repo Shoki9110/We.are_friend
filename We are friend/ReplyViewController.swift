@@ -96,16 +96,19 @@
 //              commentArray.append(textFieldString)
             let content = textFieldString
             let saveDocument = Firestore.firestore().collection("comments").document()
-            saveDocument.setData([
-                "content": content,
-                "postID": selectedID,
-                "commentID": saveDocument.documentID,
-                "createdAt": FieldValue.serverTimestamp(),
-            ]) {error in
+            let data: [String: Any] = [
+                        "content": content,
+                        "postID": selectedID,
+                        "commentID": saveDocument.documentID,
+                        "createdAt": FieldValue.serverTimestamp(),
+                    ]
+            saveDocument.setData(data) {error in
                 if error == nil {
+                    let comment = Comment(data: data)
+                    self.commentArray.append(comment)
+                    self.table.reloadData()
                 }
             }
-            table.reloadData()
         }
         override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
