@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var postArray: [Post] = []
     var database: Firestore! //宣言
     var selectedText: String = ""
+    var selectedID: String = ""
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        //        let destination =  segue.destination as! AddViewController
@@ -74,6 +75,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         print("\(postArray[indexPath.row])が選ばれました！")
         performSegue(withIdentifier: "toReplay", sender: nil)
         selectedText = postArray[indexPath.row].content
+        selectedID = postArray[indexPath.row].postID
         if selectedText != nil {
             performSegue(withIdentifier: "toReplay",sender: nil)
         }
@@ -82,6 +84,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if (segue.identifier == "toReplay") {
         let subVC: ReplyViewController = (segue.destination as? ReplyViewController)!
         subVC.selectedText = selectedText
+        subVC.selectedID = selectedID
         }
     }
 }
