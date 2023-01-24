@@ -19,6 +19,6 @@ struct Comment {
         content = data["content"] as! String
         commentID = data["commentID"] as! String
         postID = data["postID"] as! String
-        createdAt = data["createdAt"] as! Timestamp
+        createdAt = data["createdAt"] as? Timestamp ?? Timestamp()
     }
 }

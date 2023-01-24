@@ -67,6 +67,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         
         cell?.textLabel?.text = postArray[indexPath.row].content
+        cell?.textLabel?.numberOfLines = 0
         cell?.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.3)
         return cell!
     }
@@ -78,6 +79,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         selectedID = postArray[indexPath.row].postID
         if selectedText != nil {
         performSegue(withIdentifier: "toReplay",sender: nil)
+            self.table.reloadData()
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {

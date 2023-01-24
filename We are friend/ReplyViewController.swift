@@ -25,6 +25,7 @@
             table.dataSource = self
             table.delegate = self
             label1.text = selectedText
+            label1.numberOfLines = 0
             self.commentArray = []
             
         }
@@ -48,6 +49,7 @@
                         self.commentArray.append(comment)
                     }
                     print(self.commentArray)
+                    self.table.reloadData()
                 }
             }
                 let notification = NotificationCenter.default
