@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LWc-A7-ZhY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HOME-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="We_are_friend" customModuleProvider="target" sceneMemberID="viewController">
@@ -63,6 +63,7 @@
                             <constraint firstItem="YJG-BW-WEo" firstAttribute="top" secondItem="j0S-2R-ddf" secondAttribute="bottom" constant="1" id="vha-U6-BgN"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="HOME" image="house" catalog="system" id="CBS-xu-7Ms"/>
                     <navigationItem key="navigationItem" id="5Ni-wc-eh1"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -134,6 +135,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6vA-Fo-CpL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1824.6376811594205" y="71.651785714285708"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Cxy-AQ-esX">
+            <objects>
+                <tabBarController id="LWc-A7-ZhY" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X8F-Vo-jK6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="43I-U1-LBA"/>
+                        <segue destination="BGD-0j-ed6" kind="relationship" relationship="viewControllers" id="a9G-O7-vZx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lJf-Rr-ROV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-304" y="72"/>
+        </scene>
+        <!--設定-->
+        <scene sceneID="1PK-qR-fSe">
+            <objects>
+                <viewController id="BGD-0j-ed6" customClass="SteiViewController" customModule="We_are_friend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uhK-RB-DvR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background2.png" translatesAutoresizingMaskIntoConstraints="NO" id="lJj-Ev-PH7">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.94163078069999995" green="0.66637194160000002" blue="0.79229980710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAL-8G-DFO">
+                                <rect key="frame" x="20" y="337" width="374" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="不適切な投稿の報告"/>
+                                <connections>
+                                    <action selector="googleform:" destination="BGD-0j-ed6" eventType="touchUpInside" id="Cek-rJ-Jab"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ACj-mU-Q8x"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="lJj-Ev-PH7" secondAttribute="bottom" id="7t6-FZ-0IF"/>
+                            <constraint firstItem="lJj-Ev-PH7" firstAttribute="leading" secondItem="ACj-mU-Q8x" secondAttribute="leading" id="Gxc-GU-X6N"/>
+                            <constraint firstItem="lJj-Ev-PH7" firstAttribute="top" secondItem="uhK-RB-DvR" secondAttribute="top" id="a34-Ed-mB2"/>
+                            <constraint firstItem="lJj-Ev-PH7" firstAttribute="trailing" secondItem="ACj-mU-Q8x" secondAttribute="trailing" id="jUX-NF-kkD"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="設定" image="gear" catalog="system" id="B8Q-Bi-yTI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UXH-GG-IND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-304.34782608695656" y="888.61607142857144"/>
         </scene>
         <!--Reply View Controller-->
         <scene sceneID="OmW-4u-9AV">
@@ -237,25 +294,11 @@
             </objects>
             <point key="canvasLocation" x="876.81159420289862" y="783.48214285714278"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="eW3-pH-yJh">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="M4X-4n-Gsu" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="iaE-xo-DjM"/>
-                    <tabBar key="tabBar" tag="-1" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z5N-BH-3nT">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cgM-lo-DlB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="19" y="72"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Background2.png" width="1284" height="2786.639892578125"/>
+        <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="house" catalog="system" width="128" height="104"/>
         <image name="paperplane" catalog="system" width="128" height="119"/>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
         <image name="スクリーンショット 2022-11-06 15.20.39.png" width="27" height="20"/>

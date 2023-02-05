@@ -23,6 +23,7 @@
 		4F2AEBDA289FCAC40052AA5E /* Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F2AEBD9289FCAC40052AA5E /* Profile.png */; };
 		4F2AEBDC289FCBD20052AA5E /* Notification.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F2AEBDB289FCBD20052AA5E /* Notification.png */; };
 		4F644B2828CD9E9B00196D8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F644B2728CD9E9B00196D8E /* GoogleService-Info.plist */; };
+		4F76CACB298F4A3A00453659 /* SteiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F76CACA298F4A3A00453659 /* SteiViewController.swift */; };
 		4F9621EE2905013400975DD8 /* Mainのコピー.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F9621EC2905013300975DD8 /* Mainのコピー.storyboard */; };
 		4FC43641289F5C0D000F2AC8 /* Background2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FC43640289F5C0D000F2AC8 /* Background2.png */; };
 		4FE5118A294ED147005E8714 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE51189294ED147005E8714 /* CommentViewController.swift */; };
@@ -50,6 +51,7 @@
 		4F2AEBD9289FCAC40052AA5E /* Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Profile.png; path = "マーク/Profile.png"; sourceTree = SOURCE_ROOT; };
 		4F2AEBDB289FCBD20052AA5E /* Notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Notification.png; path = "マーク/Notification.png"; sourceTree = SOURCE_ROOT; };
 		4F644B2728CD9E9B00196D8E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4F76CACA298F4A3A00453659 /* SteiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteiViewController.swift; sourceTree = "<group>"; };
 		4F9621ED2905013300975DD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Mainのコピー.storyboard"; sourceTree = "<group>"; };
 		4FC43640289F5C0D000F2AC8 /* Background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background2.png; path = "マーク/Background2.png"; sourceTree = SOURCE_ROOT; };
 		4FE51189294ED147005E8714 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				4F01FD4C2929C17000F9766E /* ReplyViewController.swift */,
 				4F2AEBC7289F805D0052AA5E /* PostViewController.swift */,
 				4FE51189294ED147005E8714 /* CommentViewController.swift */,
+				4F76CACA298F4A3A00453659 /* SteiViewController.swift */,
 			);
 			path = "We are friend";
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				4F2AEBCC289F83EF0052AA5E /* AccountViewController.swift in Sources */,
 				4F0907EB286839C900C4ED72 /* AppDelegate.swift in Sources */,
 				4F2AEBC6289F697F0052AA5E /* AddViewController.swift in Sources */,
+				4F76CACB298F4A3A00453659 /* SteiViewController.swift in Sources */,
 				4F0907ED286839C900C4ED72 /* SceneDelegate.swift in Sources */,
 				4F2AEBC8289F805D0052AA5E /* PostViewController.swift in Sources */,
 				4F01FD4D2929C17000F9766E /* ReplyViewController.swift in Sources */,
