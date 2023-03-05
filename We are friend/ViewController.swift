@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     
     //StoryBoardで扱うTableViewを宣言
@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        database = Firestore.firestore()
+        table.register(UINib(nibName: "MainTableViewCell", bundle: nil),forCellReuseIdentifier: "customCell")
         table.delegate = self  // 追加
         table.dataSource = self // 追加
     }
@@ -54,6 +54,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     self.postArray.append(post)
                 }
                 print(self.postArray)
+                self.postArray.reverse()
                 self.table.reloadData()
             }
         }
@@ -63,13 +64,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return postArray.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-        
-        
-        cell?.textLabel?.text = postArray[indexPath.row].content
-        cell?.textLabel?.numberOfLines = 0
-        cell?.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.3)
-        return cell!
+//        let xell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! MainTableViewCell
+        cell.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.3)
+        cell.label?.text = postArray[indexPath.row].content
+        cell.label?.numberOfLines = 0
+        cell.button1.addTarget(self, action: #selector(self.tapButton(_:)), for: UIControl.Event.touchUpInside)
+        return cell
     }
     //セルが押された時に呼ばれるメゾット
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -89,5 +90,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         subVC.selectedID = selectedID
         }
     }
+    @objc func tapButton(_ sender: UIButton){
+            print("ボタンがタップされました。")
+    
 }
+                  
+                  }
     

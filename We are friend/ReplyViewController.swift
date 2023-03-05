@@ -28,13 +28,33 @@
             label1.numberOfLines = 0
             self.commentArray = []
             
-        }
-        @IBAction func backView1(_sender: Any){
-            self.dismiss(animated: true, completion: nil)
+//        }
+//        @IBAction func backView1(_sender: Any){
+//            self.dismiss(animated: true, completion: nil)
         }
         @IBAction func tableViewTap(_ sender: Any){
             self.view.endEditing(true)
             resignFirstResponder()
+        }
+        @IBAction func alertbutton(sender: UIButton){
+            let alert: UIAlertController = UIAlertController(title: "アラート", message: "削除してもいいですか？", preferredStyle: UIAlertController.Style.alert)
+            let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+                (action: UIAlertAction!) -> Void in
+
+                    self.dismiss(animated: true, completion: nil)
+                }
+                
+                
+            )
+            let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler:{
+                // ボタンが押された時の処理を書く（クロージャ実装）
+                (action: UIAlertAction!) -> Void in
+                print("Cancel")
+            })
+            alert.addAction(cancelAction)
+            alert.addAction(defaultAction)
+            self.present(alert, animated: true, completion: nil)
+            
         }
            
         override func viewWillAppear(_ animated: Bool) {

@@ -166,9 +166,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" red="0.94163078069999995" green="0.66637194160000002" blue="0.79229980710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAL-8G-DFO">
-                                <rect key="frame" x="20" y="337" width="374" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAL-8G-DFO">
+                                <rect key="frame" x="20" y="135" width="374" height="35"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="不適切な投稿の報告"/>
@@ -181,7 +180,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="lJj-Ev-PH7" secondAttribute="bottom" id="7t6-FZ-0IF"/>
+                            <constraint firstItem="CAL-8G-DFO" firstAttribute="top" secondItem="ACj-mU-Q8x" secondAttribute="top" constant="87" id="8yJ-C8-I9U"/>
+                            <constraint firstItem="CAL-8G-DFO" firstAttribute="leading" secondItem="ACj-mU-Q8x" secondAttribute="leading" constant="20" id="GAh-QP-dQG"/>
                             <constraint firstItem="lJj-Ev-PH7" firstAttribute="leading" secondItem="ACj-mU-Q8x" secondAttribute="leading" id="Gxc-GU-X6N"/>
+                            <constraint firstItem="ACj-mU-Q8x" firstAttribute="trailing" secondItem="CAL-8G-DFO" secondAttribute="trailing" constant="20" id="Nhn-8i-C59"/>
                             <constraint firstItem="lJj-Ev-PH7" firstAttribute="top" secondItem="uhK-RB-DvR" secondAttribute="top" id="a34-Ed-mB2"/>
                             <constraint firstItem="lJj-Ev-PH7" firstAttribute="trailing" secondItem="ACj-mU-Q8x" secondAttribute="trailing" id="jUX-NF-kkD"/>
                         </constraints>
@@ -190,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UXH-GG-IND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-304.34782608695656" y="888.61607142857144"/>
+            <point key="canvasLocation" x="-304" y="783"/>
         </scene>
         <!--Reply View Controller-->
         <scene sceneID="OmW-4u-9AV">
@@ -251,6 +253,15 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="pushBotton:" destination="UTN-ZM-sqi" eventType="touchUpInside" id="px9-Zm-4Of"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBH-K3-VnY">
+                                <rect key="frame" x="340" y="43" width="59" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="削除"/>
+                                <connections>
+                                    <action selector="alertbuttonWithSender:" destination="UTN-ZM-sqi" eventType="touchUpInside" id="In8-W2-UQJ"/>
                                 </connections>
                             </button>
                         </subviews>
