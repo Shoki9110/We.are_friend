@@ -40,11 +40,9 @@
             let alert: UIAlertController = UIAlertController(title: "アラート", message: "削除してもいいですか？", preferredStyle: UIAlertController.Style.alert)
             let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
                 (action: UIAlertAction!) -> Void in
-
-                    self.dismiss(animated: true, completion: nil)
-                }
-                
-                
+                self.dismiss(animated: true, completion: nil)
+                self.database.collection("postID").document(self.selectedID).delete()
+            }
             )
             let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler:{
                 // ボタンが押された時の処理を書く（クロージャ実装）
@@ -56,7 +54,6 @@
             self.present(alert, animated: true, completion: nil)
             
         }
-           
         override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
             database = Firestore.firestore()
