@@ -70,6 +70,7 @@
                         <outlet property="table" destination="YJG-BW-WEo" id="irE-Bu-q1G"/>
                         <segue destination="ntg-mO-VNh" kind="presentation" identifier="Add" id="CRO-8a-amn"/>
                         <segue destination="UTN-ZM-sqi" kind="show" identifier="toReplay" id="wHi-MU-uFB"/>
+                        <segue destination="Psz-4s-cAG" kind="presentation" identifier="toTerms" modalPresentationStyle="fullScreen" id="tRq-KG-V6v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -304,6 +305,52 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="876.81159420289862" y="783.48214285714278"/>
+        </scene>
+        <!--Terms View Controller-->
+        <scene sceneID="QBf-P5-eBB">
+            <objects>
+                <viewController id="Psz-4s-cAG" customClass="TermsViewController" customModule="We_are_friend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L3n-aD-fAl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background2.png" translatesAutoresizingMaskIntoConstraints="NO" id="0GO-k2-yOc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.94163078069999995" green="0.66637194160000002" blue="0.79229980710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZp-Dl-ytL">
+                                <rect key="frame" x="117" y="598" width="180" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="利用規約に同意する"/>
+                                <connections>
+                                    <action selector="showAlert" destination="Psz-4s-cAG" eventType="touchUpInside" id="qHR-xL-zUE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3X-eA-vbh">
+                                <rect key="frame" x="134" y="251" width="146" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="利用規約を読む"/>
+                                <connections>
+                                    <action selector="googleform:" destination="Psz-4s-cAG" eventType="touchUpInside" id="d9I-58-zjs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="emb-h8-kIQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="0GO-k2-yOc" secondAttribute="bottom" id="TJh-XT-at3"/>
+                            <constraint firstItem="0GO-k2-yOc" firstAttribute="trailing" secondItem="emb-h8-kIQ" secondAttribute="trailing" id="Uv1-pT-gGh"/>
+                            <constraint firstItem="0GO-k2-yOc" firstAttribute="leading" secondItem="emb-h8-kIQ" secondAttribute="leading" id="fVw-vx-dfT"/>
+                            <constraint firstItem="0GO-k2-yOc" firstAttribute="top" secondItem="L3n-aD-fAl" secondAttribute="top" id="hBD-va-5vn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MXF-ig-lDQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ab-5U-de8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877" y="-643"/>
         </scene>
     </scenes>
     <resources>

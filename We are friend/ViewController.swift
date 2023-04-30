@@ -18,29 +18,33 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var database: Firestore! //宣言
     var selectedText: String = ""
     var selectedID: String = ""
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        //        let destination =  segue.destination as! AddViewController
-//
-//        if segue.identifier == "toReplay" {
-//
-//            let nextView = segue.destination as! ReplyViewController
-//
-//            nextView.argString = "text"
-//
-//        }
-//    }
+    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //        //        let destination =  segue.destination as! AddViewController
+    //
+    //        if segue.identifier == "toReplay" {
+    //
+    //            let nextView = segue.destination as! ReplyViewController
+    //
+    //            nextView.argString = "text"
+    //
+    //        }
+    //    }
     
     //投稿追加画面に遷移するボタンを押したときの動作を記述。
     @IBAction func toAddViewController() {
         performSegue(withIdentifier: "Add", sender: nil)
         
     }
+     func toTermsViewController() {
+        performSegue(withIdentifier: "toTerms", sender: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         table.register(UINib(nibName: "MainTableViewCell", bundle: nil),forCellReuseIdentifier: "customCell")
         table.delegate = self  // 追加
         table.dataSource = self // 追加
+
+            
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -58,7 +62,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 self.table.reloadData()
             }
         }
+        
     }
+    override func viewDidAppear(_ animated: Bool) {
+        // UserDefaultsの中身を全削除する
+//        let domain = Bundle.main.bundleIdentifier!
+//        UserDefaults.standard.removePersistentDomain(forName: domain)
+//        UserDefaults.standard.synchronize()
+
+        // UserDefaultsに"agreedToTerms"の値が存在しない、またはfalseである場合に、toTermsViewControllerを実行する
+        if UserDefaults.standard.object(forKey: "agreedToTerms") == nil || UserDefaults.standard.bool(forKey: "agreedToTerms") == false {
+            toTermsViewController()
+            
+        }
+
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //セルの数をpostArrayの数にする
         return postArray.count
@@ -94,6 +114,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             print("ボタンがタップされました。")
     
 }
-                  
+    
                   }
     

@@ -41,7 +41,8 @@
             let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
                 (action: UIAlertAction!) -> Void in
                 self.dismiss(animated: true, completion: nil)
-                self.database.collection("postID").document(self.selectedID).delete()
+                self.database.collection("posts").document(self.selectedID).delete()
+                self.table.reloadData()
             }
             )
             let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler:{
