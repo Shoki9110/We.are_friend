@@ -271,9 +271,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Block"/>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="UTN-ZM-sqi" eventType="touchUpInside" id="NEC-mU-znQ"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b4E-7j-YSK"/>
