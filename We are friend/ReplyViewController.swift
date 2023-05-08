@@ -55,6 +55,18 @@
             self.present(alert, animated: true, completion: nil)
             
         }
+        @IBAction func buttonTapped(_ sender: Any) {
+            let alertController = UIAlertController(title: "確認", message: "ブロックしますか？", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
+            let blockAction = UIAlertAction(title: "ブロック", style: .destructive) { _ in
+                // ブロックする処理を記述する
+            }
+            
+            alertController.addAction(cancelAction)
+            alertController.addAction(blockAction)
+            
+            present(alertController, animated: true, completion: nil)
+        }
         override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
             database = Firestore.firestore()
