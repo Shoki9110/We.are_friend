@@ -6,7 +6,7 @@
     //
 
     import UIKit
-    import Firebase
+    import FirebaseFirestore
 
     class ReplyViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
         @IBOutlet var textField: UITextField!
