@@ -76,7 +76,10 @@
         }
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! MainTableViewCell
-            cell.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.3)
+//            cell.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.3)
+            cell.mainBackguround.layer.cornerRadius = 8
+            cell.mainBackguround.layer.masksToBounds = true
+            cell.backgroundColor = .systemGray6
             cell.label?.text = postArray[indexPath.row].content
             cell.label?.numberOfLines = 0
             cell.button1.addTarget(self, action: #selector(self.tapButton(_:)), for: UIControl.Event.touchUpInside)

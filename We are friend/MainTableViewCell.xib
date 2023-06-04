@@ -1,49 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="MainTableViewCell" customModule="We_are_friend" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="69" id="KGk-i7-Jjw" customClass="MainTableViewCell" customModule="We_are_friend" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="332" height="69"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                <rect key="frame" x="0.0" y="0.0" width="332" height="69"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="文章" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9k2-tg-hA8">
-                        <rect key="frame" x="16" y="12" width="195" height="41"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUX-NR-xRA">
-                        <rect key="frame" x="267" y="12" width="37" height="42"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="1"/>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGh-3Z-xco">
-                        <rect key="frame" x="219" y="12" width="40" height="39"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" title="２"/>
-                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="clA-iK-o0o" userLabel="Main Backgroound">
+                        <rect key="frame" x="12" y="12" width="308" height="45"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uer-0K-gdZ" userLabel="Shadow Layer" customClass="ShadowView" customModule="We_are_friend" customModuleProvider="target">
+                        <rect key="frame" x="12" y="12" width="308" height="45"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="文章" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9k2-tg-hA8">
+                                <rect key="frame" x="20" y="12" width="147" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUX-NR-xRA">
+                                <rect key="frame" x="235" y="5.3333333333333321" width="31.666666666666686" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGh-3Z-xco">
+                                <rect key="frame" x="266.66666666666669" y="5.3333333333333321" width="41.333333333333314" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="２"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OGh-3Z-xco" firstAttribute="leading" secondItem="FUX-NR-xRA" secondAttribute="trailing" id="0iV-1G-lsg"/>
+                            <constraint firstAttribute="trailing" secondItem="OGh-3Z-xco" secondAttribute="trailing" id="9Sq-Hk-RdQ"/>
+                            <constraint firstItem="FUX-NR-xRA" firstAttribute="centerY" secondItem="uer-0K-gdZ" secondAttribute="centerY" id="9pA-dt-LJ9"/>
+                            <constraint firstItem="OGh-3Z-xco" firstAttribute="centerY" secondItem="uer-0K-gdZ" secondAttribute="centerY" id="Amx-Nk-V73"/>
+                            <constraint firstItem="9k2-tg-hA8" firstAttribute="centerY" secondItem="uer-0K-gdZ" secondAttribute="centerY" id="Q6X-QB-V0c"/>
+                            <constraint firstItem="9k2-tg-hA8" firstAttribute="leading" secondItem="uer-0K-gdZ" secondAttribute="leading" constant="20" id="n6e-Ne-lQF"/>
+                        </constraints>
+                    </view>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="uer-0K-gdZ" secondAttribute="trailing" constant="12" id="Crw-Vu-WGb"/>
+                    <constraint firstItem="clA-iK-o0o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="MKA-G7-SJI"/>
+                    <constraint firstAttribute="bottom" secondItem="clA-iK-o0o" secondAttribute="bottom" constant="12" id="NbJ-jA-QWe"/>
+                    <constraint firstAttribute="bottom" secondItem="uer-0K-gdZ" secondAttribute="bottom" constant="12" id="Pax-2U-J5I"/>
+                    <constraint firstItem="uer-0K-gdZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="V8X-yL-OcH"/>
+                    <constraint firstItem="clA-iK-o0o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="VWq-lZ-YcS"/>
+                    <constraint firstItem="uer-0K-gdZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="X2r-gN-vbT"/>
+                    <constraint firstItem="uer-0K-gdZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="c7N-QS-mPU"/>
+                    <constraint firstAttribute="trailing" secondItem="clA-iK-o0o" secondAttribute="trailing" constant="12" id="nL5-ko-aYH"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="button1" destination="FUX-NR-xRA" id="7dB-sx-7fn"/>
                 <outlet property="button2" destination="OGh-3Z-xco" id="Ukc-fT-2WX"/>
                 <outlet property="label" destination="9k2-tg-hA8" id="8MA-6C-NWX"/>
+                <outlet property="mainBackguround" destination="clA-iK-o0o" id="Xyx-d4-xRO"/>
+                <outlet property="shadowLayer" destination="uer-0K-gdZ" id="6QC-pH-zk3"/>
             </connections>
-            <point key="canvasLocation" x="112.97709923664122" y="28.87323943661972"/>
+            <point key="canvasLocation" x="122.13740458015266" y="28.52112676056338"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
