@@ -146,6 +146,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="43I-U1-LBA"/>
@@ -257,20 +258,23 @@
                                     <action selector="pushBotton:" destination="UTN-ZM-sqi" eventType="touchUpInside" id="px9-Zm-4Of"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DwE-Bt-xQq">
+                                <rect key="frame" x="265" y="42" width="67" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Block"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="UTN-ZM-sqi" eventType="touchUpInside" id="VHZ-hD-ocK"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBH-K3-VnY">
-                                <rect key="frame" x="340" y="43" width="74" height="35"/>
+                                <rect key="frame" x="328" y="42" width="74" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Delete"/>
                                 <connections>
                                     <action selector="alertbuttonWithSender:" destination="UTN-ZM-sqi" eventType="touchUpInside" id="In8-W2-UQJ"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DwE-Bt-xQq">
-                                <rect key="frame" x="265" y="42" width="67" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Block"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b4E-7j-YSK"/>

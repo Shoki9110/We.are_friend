@@ -28,9 +28,9 @@
 		4FADC52D298F6F1D006B412D /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FADC52B298F6F1D006B412D /* MainTableViewCell.swift */; };
 		4FADC52E298F6F1D006B412D /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FADC52C298F6F1D006B412D /* MainTableViewCell.xib */; };
 		4FC43641289F5C0D000F2AC8 /* Background2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FC43640289F5C0D000F2AC8 /* Background2.png */; };
+		4FCD5F6E2A19EC74005E10C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FCD5F6D2A19EC74005E10C8 /* GoogleService-Info.plist */; };
 		4FE5118A294ED147005E8714 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE51189294ED147005E8714 /* CommentViewController.swift */; };
 		797764E4A06F468D63D01E09 /* Pods_We_are_friend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4820B30D05310A0E6BA6055B /* Pods_We_are_friend.framework */; };
-		9F584D4D2A199B67009E783B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F584D4C2A199B67009E783B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,9 +59,9 @@
 		4FADC52B298F6F1D006B412D /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		4FADC52C298F6F1D006B412D /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		4FC43640289F5C0D000F2AC8 /* Background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background2.png; path = "マーク/Background2.png"; sourceTree = SOURCE_ROOT; };
+		4FCD5F6D2A19EC74005E10C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		4FE51189294ED147005E8714 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		5738FE630E960400BA374C9C /* Pods-We are friend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-We are friend.debug.xcconfig"; path = "Target Support Files/Pods-We are friend/Pods-We are friend.debug.xcconfig"; sourceTree = "<group>"; };
-		9F584D4C2A199B67009E783B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +111,7 @@
 				4F0907F3286839CB00C4ED72 /* Assets.xcassets */,
 				4F0907F5286839CB00C4ED72 /* LaunchScreen.storyboard */,
 				4F0907F8286839CB00C4ED72 /* Info.plist */,
-				9F584D4C2A199B67009E783B /* GoogleService-Info.plist */,
+				4FCD5F6D2A19EC74005E10C8 /* GoogleService-Info.plist */,
 				4F2AEBCB289F83EF0052AA5E /* AccountViewController.swift */,
 				4F2AEBC9289F82260052AA5E /* UserViewController.swift */,
 				4F01FD4C2929C17000F9766E /* ReplyViewController.swift */,
@@ -210,11 +210,11 @@
 				4F2AEBDA289FCAC40052AA5E /* Profile.png in Resources */,
 				4F0907F7286839CB00C4ED72 /* LaunchScreen.storyboard in Resources */,
 				4F1A703629178B15001532CB /* スクリーンショット 2022-11-06 15.20.39.png in Resources */,
-				9F584D4D2A199B67009E783B /* GoogleService-Info.plist in Resources */,
 				4F2AEBDC289FCBD20052AA5E /* Notification.png in Resources */,
 				4FADC52E298F6F1D006B412D /* MainTableViewCell.xib in Resources */,
 				4F2AEBD6289FC9BC0052AA5E /* Home.png in Resources */,
 				4F0907F4286839CB00C4ED72 /* Assets.xcassets in Resources */,
+				4FCD5F6E2A19EC74005E10C8 /* GoogleService-Info.plist in Resources */,
 				4F9621EE2905013400975DD8 /* Mainのコピー.storyboard in Resources */,
 				4F0907F2286839C900C4ED72 /* Main.storyboard in Resources */,
 			);
