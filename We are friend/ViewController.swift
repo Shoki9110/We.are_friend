@@ -35,6 +35,7 @@
             table.register(UINib(nibName: "MainTableViewCell", bundle: nil),forCellReuseIdentifier: "customCell")
             table.delegate = self  // 追加
             table.dataSource = self // 追加
+            table.rowHeight = 80
 
                 
         }
