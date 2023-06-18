@@ -30,23 +30,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUX-NR-xRA">
-                                <rect key="frame" x="235" y="5.3333333333333321" width="31.666666666666686" height="34.333333333333343"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="1"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGh-3Z-xco">
-                                <rect key="frame" x="266.66666666666669" y="5.3333333333333321" width="41.333333333333314" height="34.333333333333343"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="２"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="OGh-3Z-xco" firstAttribute="leading" secondItem="FUX-NR-xRA" secondAttribute="trailing" id="0iV-1G-lsg"/>
-                            <constraint firstAttribute="trailing" secondItem="OGh-3Z-xco" secondAttribute="trailing" id="9Sq-Hk-RdQ"/>
-                            <constraint firstItem="FUX-NR-xRA" firstAttribute="centerY" secondItem="uer-0K-gdZ" secondAttribute="centerY" id="9pA-dt-LJ9"/>
-                            <constraint firstItem="OGh-3Z-xco" firstAttribute="centerY" secondItem="uer-0K-gdZ" secondAttribute="centerY" id="Amx-Nk-V73"/>
                             <constraint firstItem="9k2-tg-hA8" firstAttribute="centerY" secondItem="uer-0K-gdZ" secondAttribute="centerY" id="Q6X-QB-V0c"/>
                             <constraint firstItem="9k2-tg-hA8" firstAttribute="leading" secondItem="uer-0K-gdZ" secondAttribute="leading" constant="20" id="n6e-Ne-lQF"/>
                         </constraints>
@@ -66,8 +52,6 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="button1" destination="FUX-NR-xRA" id="7dB-sx-7fn"/>
-                <outlet property="button2" destination="OGh-3Z-xco" id="Ukc-fT-2WX"/>
                 <outlet property="label" destination="9k2-tg-hA8" id="8MA-6C-NWX"/>
                 <outlet property="mainBackguround" destination="clA-iK-o0o" id="Xyx-d4-xRO"/>
                 <outlet property="shadowLayer" destination="uer-0K-gdZ" id="6QC-pH-zk3"/>

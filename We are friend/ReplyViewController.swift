@@ -28,7 +28,6 @@
                 label1.text = selectedText
                 label1.numberOfLines = 0
                 self.commentArray = []
-                
             }
             @IBAction func tableViewTap(_ sender: Any){
                 self.view.endEditing(true)
@@ -55,7 +54,7 @@
             }
             @IBAction func buttonTapped(_ sender: Any) {
                 var blockID = userDefault.array(forKey: "post") as? [String] ?? []
-                let alertController = UIAlertController(title: "確認", message: "ブロックしますか？", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "確認", message: "本当にブロックしてよろしいですか？", preferredStyle: .alert)
                 let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
                 let blockAction = UIAlertAction(title: "ブロック", style: .destructive) { _ in
                     // ブロックする処理を記述する
@@ -93,7 +92,7 @@
                             let comment = Comment(data: data)
                             self.commentArray.append(comment)
                         }
-                        print(self.commentArray)
+//                        print(self.commentArray)
                         self.table.reloadData()
                     }
                 }

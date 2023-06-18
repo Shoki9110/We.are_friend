@@ -32,15 +32,27 @@
         }
         override func viewDidLoad() {
             super.viewDidLoad()
+            table.refreshControl = UIRefreshControl()
+            table.refreshControl?.addTarget(self, action: #selector(onRefresh(_:)), for: .valueChanged)
             table.register(UINib(nibName: "MainTableViewCell", bundle: nil),forCellReuseIdentifier: "customCell")
             table.delegate = self  // 追加
             table.dataSource = self // 追加
             table.rowHeight = 80
-
+            getData()
                 
+        }
+        @objc private func onRefresh(_ sender: AnyObject) {
+            getData()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+                self?.table.reloadData()
+                self?.table.refreshControl?.endRefreshing()
+            }
         }
         override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(animated)
+            getData()
+        }
+        func getData() {
             database = Firestore.firestore()
             database.collection("posts").getDocuments { (snapshot, error) in
                 if error == nil, let snapshot = snapshot {
@@ -83,13 +95,11 @@
             cell.backgroundColor = .systemGray6
             cell.label?.text = postArray[indexPath.row].content
             cell.label?.numberOfLines = 0
-            cell.button1.addTarget(self, action: #selector(self.tapButton(_:)), for: UIControl.Event.touchUpInside)
             return cell
         }
         //セルが押された時に呼ばれるメゾット
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             print("\(postArray[indexPath.row])が選ばれました！")
-            performSegue(withIdentifier: "toReplay", sender: nil)
             selectedText = postArray[indexPath.row].content
             selectedID = postArray[indexPath.row].postID
             if selectedText != nil {
@@ -99,15 +109,14 @@
         }
         override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
             if (segue.identifier == "toReplay") {
+                print("%%%")
+                print(selectedID)
+                print("%%%")
             let subVC: ReplyViewController = (segue.destination as? ReplyViewController)!
-            subVC.selectedText = selectedText
-            subVC.selectedID = selectedID
+                subVC.selectedText = self.selectedText
+                subVC.selectedID = self.selectedID
             }
         }
-        @objc func tapButton(_ sender: UIButton){
-                print("ボタンがタップされました。")
-        
-    }
         
                       }
         
