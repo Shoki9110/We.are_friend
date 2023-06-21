@@ -35,6 +35,7 @@
             }
             @IBAction func alertbutton(sender: UIButton){
                 let alert: UIAlertController = UIAlertController(title: "削除しますか？", message: "投稿が削除されますけどよろしいですか？", preferredStyle: UIAlertController.Style.alert)
+                
                 let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
                     (action: UIAlertAction!) -> Void in
                     self.dismiss(animated: true, completion: nil)
