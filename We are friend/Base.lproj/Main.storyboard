@@ -52,16 +52,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="5Ni-wc-eh1">
                         <barButtonItem key="rightBarButtonItem" style="done" id="UzO-U8-GlQ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="j0S-2R-ddf">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="j0S-2R-ddf">
                                 <rect key="frame" x="343" y="5" width="51" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="スクリーンショット 2022-11-06 15.20.39.png"/>
                                 <connections>
                                     <action selector="toAddViewController" destination="BYZ-38-t0r" eventType="touchUpInside" id="skq-nZ-7J2"/>
-                                    <segue destination="ntg-mO-VNh" kind="showDetail" identifier="Add" id="GYq-zH-YHG"/>
                                 </connections>
                             </button>
+                            <connections>
+                                <segue destination="ntg-mO-VNh" kind="show" id="ZXj-9t-v78"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -88,7 +90,7 @@
                                 <color key="backgroundColor" red="0.94163078069999995" green="0.66637194160000002" blue="0.79229980710000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zW7-fa-z1O">
-                                <rect key="frame" x="334" y="4" width="60" height="60"/>
+                                <rect key="frame" x="334" y="96" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="SO1-z3-cC7"/>
                                     <constraint firstAttribute="width" constant="60" id="jRp-uz-U1G"/>
@@ -104,7 +106,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="ここに入力してね" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8lp-zw-Z6x">
-                                <rect key="frame" x="43" y="96" width="328" height="344"/>
+                                <rect key="frame" x="43" y="188" width="328" height="169"/>
                                 <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -130,6 +132,7 @@
                             <constraint firstItem="zW7-fa-z1O" firstAttribute="top" secondItem="pKs-c6-wU2" secondAttribute="top" constant="4" id="wO1-V3-jCk"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="0g9-f8-ocT"/>
                     <connections>
                         <outlet property="contentTextView" destination="8lp-zw-Z6x" id="KeO-4d-ZXk"/>
                     </connections>

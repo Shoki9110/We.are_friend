@@ -9,14 +9,14 @@
     import FirebaseFirestore
 
     class AddViewController: UIViewController {
-        
+
         @IBOutlet var contentTextView: UITextView!
-        
+
 
         override func viewDidLoad() {
             super.viewDidLoad()
         }
-        
+
         @IBAction func postContent() {
             let content = contentTextView.text!
             let saveDocument = Firestore.firestore().collection("posts").document()

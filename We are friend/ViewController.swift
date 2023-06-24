@@ -23,10 +23,6 @@
         
         
         //投稿追加画面に遷移するボタンを押したときの動作を記述。
-        @IBAction func toAddViewController() {
-            performSegue(withIdentifier: "Add", sender: nil)
-            
-        }
          func toTermsViewController() {
             performSegue(withIdentifier: "toTerms", sender: nil)
         }
