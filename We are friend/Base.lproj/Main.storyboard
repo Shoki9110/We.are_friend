@@ -58,12 +58,9 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="スクリーンショット 2022-11-06 15.20.39.png"/>
                                 <connections>
-                                    <action selector="toAddViewController" destination="BYZ-38-t0r" eventType="touchUpInside" id="skq-nZ-7J2"/>
+                                    <segue destination="ntg-mO-VNh" kind="show" id="MBa-tS-3Ud"/>
                                 </connections>
                             </button>
-                            <connections>
-                                <segue destination="ntg-mO-VNh" kind="show" id="ZXj-9t-v78"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

@@ -59,7 +59,8 @@
                 let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
                 let blockAction = UIAlertAction(title: "ブロック", style: .destructive) { _ in
                     // ブロックする処理を記述する
-                    self.dismiss(animated: true, completion: nil)
+//                    self.dismiss(animated: true, completion: nil)
+                    self.navigationController?.popViewController(animated: true)
                     let doc = self.database.collection("posts").document(self.selectedID)
                     doc.getDocument { document, error in
                         if let document = document, document.exists {
