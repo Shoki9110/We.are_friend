@@ -171,4 +171,9 @@
             func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
                 print("\(commentArray[indexPath.row])が選ばれました！")
             }
+            @IBAction func googleform(_ sender: Any) {
+            if let url = URL(string: "https://docs.google.com/forms/d/e/1FAIpQLSffLoV6vQPmVfpYZCef-g7V95rn85a5x5T_crfT3MgPUcS8EA/viewform?usp=sf_link") {
+                    UIApplication.shared.open(url)
+                }
+            }
     }

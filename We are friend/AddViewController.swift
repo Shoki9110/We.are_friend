@@ -27,7 +27,8 @@
                 "updatedAt": FieldValue.serverTimestamp()
             ]) {error in
                 if error == nil {
-                    self.dismiss(animated: true, completion: nil)
+                    self.navigationController?.popViewController(animated: true)
+                    //self.dismiss(animated: true, completion: nil)
                 }
             }
         }

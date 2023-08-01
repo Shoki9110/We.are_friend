@@ -145,7 +145,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X8F-Vo-jK6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20376809227545531" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" systemColor="systemBackgroundColor"/>
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -188,16 +188,37 @@
                                     <action selector="googleform:" destination="BGD-0j-ed6" eventType="touchUpInside" id="Cek-rJ-Jab"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3J2-cQ-R1V">
+                                <rect key="frame" x="20" y="273" width="374" height="38"/>
+                                <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="利用条約">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="usertreaty:" destination="BGD-0j-ed6" eventType="touchUpInside" id="ces-Cs-4cU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ACj-mU-Q8x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="lJj-Ev-PH7" secondAttribute="bottom" id="7t6-FZ-0IF"/>
                             <constraint firstItem="CAL-8G-DFO" firstAttribute="top" secondItem="ACj-mU-Q8x" secondAttribute="top" constant="87" id="8yJ-C8-I9U"/>
+                            <constraint firstItem="3J2-cQ-R1V" firstAttribute="top" secondItem="CAL-8G-DFO" secondAttribute="bottom" constant="100" id="Cid-gp-Vgf"/>
                             <constraint firstItem="CAL-8G-DFO" firstAttribute="leading" secondItem="ACj-mU-Q8x" secondAttribute="leading" constant="20" id="GAh-QP-dQG"/>
                             <constraint firstItem="lJj-Ev-PH7" firstAttribute="leading" secondItem="ACj-mU-Q8x" secondAttribute="leading" id="Gxc-GU-X6N"/>
                             <constraint firstItem="ACj-mU-Q8x" firstAttribute="trailing" secondItem="CAL-8G-DFO" secondAttribute="trailing" constant="20" id="Nhn-8i-C59"/>
+                            <constraint firstItem="3J2-cQ-R1V" firstAttribute="leading" secondItem="ACj-mU-Q8x" secondAttribute="leading" constant="20" id="PaC-yr-GjP"/>
                             <constraint firstItem="lJj-Ev-PH7" firstAttribute="top" secondItem="uhK-RB-DvR" secondAttribute="top" id="a34-Ed-mB2"/>
+                            <constraint firstItem="ACj-mU-Q8x" firstAttribute="trailing" secondItem="3J2-cQ-R1V" secondAttribute="trailing" constant="20" id="fvD-4q-tYn"/>
                             <constraint firstItem="lJj-Ev-PH7" firstAttribute="trailing" secondItem="ACj-mU-Q8x" secondAttribute="trailing" id="jUX-NF-kkD"/>
                         </constraints>
                     </view>
@@ -221,7 +242,7 @@
                                 <gestureRecognizers/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADm-IC-ACl">
-                                <rect key="frame" x="15" y="93" width="329" height="85"/>
+                                <rect key="frame" x="15" y="93" width="329" height="88"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -232,7 +253,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ki2-8y-VIJ">
-                                <rect key="frame" x="0.0" y="183" width="414" height="556"/>
+                                <rect key="frame" x="0.0" y="186" width="414" height="553"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <gestureRecognizers/>
                                 <prototypes>
@@ -266,7 +287,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBH-K3-VnY">
-                                <rect key="frame" x="339" y="147" width="70" height="30"/>
+                                <rect key="frame" x="339" y="150" width="70" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="0.49778191774886177" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="HiJ-29-yrn"/>
@@ -338,14 +359,36 @@
                             <constraint firstItem="KcT-4X-Tf2" firstAttribute="top" secondItem="Ki2-8y-VIJ" secondAttribute="bottom" constant="23" id="Ytp-db-Kxk"/>
                             <constraint firstItem="ADm-IC-ACl" firstAttribute="leading" secondItem="b4E-7j-YSK" secondAttribute="leading" constant="15" id="ccd-zp-CBn"/>
                             <constraint firstItem="b4E-7j-YSK" firstAttribute="trailing" secondItem="ADm-IC-ACl" secondAttribute="trailing" constant="70" id="iMh-cM-fkx"/>
-                            <constraint firstItem="pBH-K3-VnY" firstAttribute="top" secondItem="b4E-7j-YSK" secondAttribute="top" constant="55" id="v5I-bw-Fli"/>
+                            <constraint firstItem="pBH-K3-VnY" firstAttribute="top" secondItem="z0O-Ga-KOH" secondAttribute="bottom" constant="10" id="v5I-bw-Fli"/>
                             <constraint firstItem="ttN-DM-sWN" firstAttribute="bottom" secondItem="b4E-7j-YSK" secondAttribute="bottom" id="zQu-HL-ur8"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="6Sw-r6-mgy" appends="YES" id="D6k-4v-scr"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="Gs3-aX-FOP"/>
+                    <navigationItem key="navigationItem" id="Gs3-aX-FOP">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="QZW-pt-C7y">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="pbE-dD-Et9">
+                                <rect key="frame" x="340.5" y="9.5" width="53.5" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.49038585130000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Report">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="9"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="googleform:" destination="UTN-ZM-sqi" eventType="touchUpInside" id="3pl-HS-xXj"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="label1" destination="ADm-IC-ACl" id="067-Ak-KCC"/>
                         <outlet property="table" destination="Ki2-8y-VIJ" id="dWp-ps-UAy"/>
@@ -359,7 +402,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1787" y="783"/>
+            <point key="canvasLocation" x="1786.9565217391305" y="782.8125"/>
         </scene>
         <!--Terms View Controller-->
         <scene sceneID="QBf-P5-eBB">
@@ -431,7 +474,9 @@
         <scene sceneID="EpH-Vu-PFC">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="djg-OK-W3N" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="HOME" image="house" catalog="system" id="CBS-xu-7Ms"/>
+                    <tabBarItem key="tabBarItem" title="HOME" image="house" catalog="system" id="CBS-xu-7Ms">
+                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Jr-XV-I16">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
@@ -463,6 +508,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
