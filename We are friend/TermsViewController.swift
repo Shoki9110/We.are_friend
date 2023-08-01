@@ -41,6 +41,11 @@
                 UIApplication.shared.open(url)
             }
         }
+        @IBAction func usertreaty(_ sender: Any) {
+            if let url = URL(string: "https://pale-echo-319.notion.site/We-are-friend-2d7bb6f807b1447da25e676290ac435c") {
+                UIApplication.shared.open(url)
+            }
+        }
 
         /*
         // MARK: - Navigation
